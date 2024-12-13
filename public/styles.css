@@ -1,0 +1,203 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"poppins",sans-serif;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url('cool-background.png');
+    background-size: cover; /* Pastikan gambar memenuhi seluruh layar */
+    background-repeat: no-repeat; /* Jangan ulang gambar */
+    background-position: center center; /* Gambar dipusatkan secara horizontal dan vertikal */
+    background-attachment: fixed; /* Latar tetap pada tempatnya saat halaman digulir */
+}
+
+.container {
+    background: #ffffff96;
+    width: 450px;
+    padding: 1.5rem;
+    margin: 100px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 1, 0.9);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.navbar {
+    position: fixed; /* Navbar tetap di bagian atas saat menggulir */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Tinggi navbar */
+    background: #2c648578; /* Warna putih transparan */
+    backdrop-filter: blur(10px); /* Efek blur */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10px; /* Memberikan ruang di kiri dan kanan */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus */
+    z-index: 1000; /* Membawa navbar di atas elemen lain */
+  }
+  
+  /* Logo styling */
+  .navbar .logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #22303f; /* Warna teks */
+    margin: 0;
+  }
+  
+  /* Nav links styling */
+  .navbar .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #2c6485; /* Warna hijau saat hover */
+  }
+
+
+.container:hover,.container:focus-within { /* Menambahkan efek saat container di-hover atau form di dalamnya fokus */
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 1, 0.8);
+    transform: scale(1.05);
+}
+
+
+form{
+    margin:0 2rem;
+}
+.form-title{
+    font-size:1.5rem;
+    font-weight:bold;
+    text-align:center;
+    padding:1.3rem;
+    margin-bottom:0.4rem;
+}
+input{
+    color:inherit;
+    width:100%;
+    background-color:transparent;
+    border:none;
+    border-bottom:1px solid #757575;
+    padding-left:1.5rem;
+    font-size:15px;
+}
+.input-group{
+    padding:1% 0;
+    position:relative;
+
+}
+.input-group i{
+    position:absolute;
+    color:black;
+}
+input:focus{
+    background-color: transparent;
+    outline:transparent;
+    border-bottom:2px solid #8fbfda;
+}
+input::placeholder{
+    color:transparent;
+}
+label{
+    color:#757575;
+    position:relative;
+    left:1.2em;
+    top:-1.3em;
+    cursor:auto;
+    transition:0.3s ease all;
+}
+input:focus~label,input:not(:placeholder-shown)~label{
+    top:-3em;
+    color:#8fbfda;
+    font-size:15px;
+}
+.recover{
+    text-align:right;
+    font-size:1rem;
+    margin-bottom:1rem;
+
+}
+.recover a{
+    text-decoration:none;
+    color:rgb(125,125,235);
+}
+.recover a:hover{
+    color:blue;
+    text-decoration:underline;
+}
+.btn{
+    font-size:1.1rem;
+    padding:8px 0;
+    border-radius:5px;
+    outline:none;
+    border:none;
+    width:100%;
+    background:#3B6382;
+    color:white;
+    cursor:pointer;
+    transition:0.9s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn:hover{
+    background:#2a455c;
+}
+.or{
+    font-size:1.1rem;
+    margin-top:0.5rem;
+    text-align:center;
+}
+.icons{
+    text-align:center;
+}
+.icons i{
+    color:rgb(125,125,235);
+    padding:0.8rem 1.5rem;
+    border-radius:10px;
+    font-size:1.5rem;
+    cursor:pointer;
+    border:2px solid #dfe9f5;
+    margin:0 15px;
+    transition:1s;
+}
+.icons i:hover{
+    background:#07001f;
+    font-size:1.6rem;
+    border:2px solid rgb(125,125,235);
+}
+.links{
+    display:flex;
+    justify-content:space-around;
+    padding:0 4rem;
+    margin-top:0.9rem;
+    font-weight:bold;
+}
+button{
+    color:rgb(125,125,235);
+    border:none;
+    background-color:transparent;
+    font-size:1rem;
+    font-weight:bold;
+}
+button:hover{
+    text-decoration:underline;
+    color:blue;
+}
