@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<header class="navbar">
+    <div class="logo">
+      <h1>Book Gallery</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+</header>
+
+<body>
+<div class="container" id="login">
+    <h1 class="form-title">Admin Login</h1>
+    <form method="post" action="/player">
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="text" name="username" id="username" placeholder="Username" required minlength="6">
+            <label for="username">Username</label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" id="password" placeholder="Password" required minlength="5">
+            <label for="password">Password</label>
+        </div>
+        <input type="submit" class="btn" value="Login" name="login">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Gallery</title>
+    <link rel="stylesheet" href="stylehomepage.css">
+</head>
+
+<header class="navbar">
+    <div class="logo">
+      <h1>Book Gallery</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <% if (isLoggedIn) { %> 
+            <li><a href="/libra" class="libra-btn">Admin Panel</a></li>
+            <li><a href="/logout" class="logout">Logout</a></li>
+        <% } else { %> 
+            <li><a href="/login" class="login">Login</a></li>
+        <% } %>
+      </ul>
+    </nav>
+</header>
+  
+
+<body>
+<!-- <form action="/login" method="get">
+    <button type="submit">Log in</button>
+</form> -->
+
+<main>
+    <section class="quote-section">
+        <div class="quote-container">
+          <p class="quote-text">“Discovering a good book is like finding a treasure that enriches your mind, fuels your imagination, and stays with you forever.”</p>
+        </div>
+        <div class="quote-image">
+          <img src="../uploads/girl-reading.png" alt="Girl reading a book">
+        </div>
+    </section>
+
+    <div class="runtext-container">
+        <div class="main-runtext">
+            <marquee direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                <span class="marquee-text">
+                    &nbsp; &nbsp; &nbsp; Books are a uniquely portable magic
+                    &nbsp; &nbsp; &nbsp; A book is a gift you can open again and again
+                    &nbsp; &nbsp; &nbsp; Reading gives us someplace to go when we have to stay where we are
+                    &nbsp; &nbsp; &nbsp; Books are mirrors: you only see in them what you already have inside
+                </span>
+            </marquee>
+        </div>
+    </div>
+    
+    <section class="library-section">
+        <br>
+        <br>
+        <br>
+        <h1>LIBRARY</h1>
+        <br>
+        <div class="book-grid">
+            <% library.forEach(row => { %>
+            <a href="/detail/<%= row.ISBN %>" class="book-item">
+                <img src="/<%= row.cover %>" alt="<%= row.judul %>">
+                <p><%= row.judul %></p>
+                <p><%= row.penulis %></p>
+            </a>
+            <% }) %>
+        </div>
+    </section>
+       
+</main>
+<footer>
+    <p>There is more treasure in books than in all the pirate’s loot on Treasure Island</p>
+</footer>
+</body>
+</html>

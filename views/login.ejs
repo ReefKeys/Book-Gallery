@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form action="/add" method="post" enctype="multipart/form-data">
+            <div class="container">
+                <h1>Add New Book</h1>
+                <input type="text" name="title" placeholder="Judul" required>
+                <input type="text" name="penerbit" placeholder="Penerbit" required>
+                <input type="text" name="kategori" placeholder="Kategori" required>
+                <input type="text" name="penulis" placeholder="Penulis" required>
+                <input type="text" name="ISBN" placeholder="ISBN" required>
+                <input type="text" name="sinopsis" placeholder="Sinopsis Buku" required>
+                <input type="file" name="cover" required>
+                <button type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-logout">
+        <li><a href="/logout" class="logout">Logout</a></li>
+        <br>
+        <li><a href="/" class="home-button">Home</a></li>
+    </div>
+
+    <div class="table-container">
+        <h1>Book List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Judul</th>
+                    <th>Penerbit</th>
+                    <th>Kategori</th>
+                    <th>Penulis</th>
+                    <th>ISBN</th>
+                    <th>Sinopsis</th>
+                    <th>Cover</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (data && data.length > 0) { %>
+                    <% data.forEach(row => { %>
+                        <tr>
+                            <td><%= row.judul %></td>
+                            <td><%= row.penerbit %></td>
+                            <td><%= row.kategori %></td>
+                            <td><%= row.penulis %></td>
+                            <td><%= row.ISBN %></td>
+                            <td><%= row.sinopsis %></td>
+                            <td><img src="/<%= row.cover %>" alt="Cover Buku" style="max-width: 100px"></td>
+                            <td class="action-buttons">
+                                <form action="/edit/<%= row.ISBN %>" method="post" style="display: inline;">
+                                    <button>Edit</button>
+                                </form>
+                                <form action="/delete/<%= row.ISBN %>" method="POST" style="display: inline;">
+                                    <button type="submit" onclick="return confirm('Yakin ingin menghapus data ini?')">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }); %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="8">Tidak ada data.</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

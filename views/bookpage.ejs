@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bookpagestyles.css">
+    <title>Book Page</title>
+</head>
+<body>
+<% library.forEach(row => { %>
+<div class="BookPage">
+    <div class="Back">
+        <button type="button" onclick="history.back()">← Back</button>
+    </div>
+    
+
+    <div class="BookContent">
+        <div class="CoverBook">
+            <img src="/<%= row.cover %>" alt="Book Cover">
+        </div>
+        <div class="BookDetails">
+            <h1 class="TitleName"><%= row.judul %></h1>
+            <p><strong>Penerbit:</strong> <%= row.penerbit %></p>
+            <p><strong>Kategori:</strong> <%= row.kategori %></p>
+            <p><strong>Penulis:</strong> <%= row.penulis %></p>
+            <p><strong>ISBN:</strong> <%= row.ISBN %></p>
+            <br>
+            <p><strong>Sinopsis:</strong></p>
+            <p><%= row.sinopsis %></p>
+        </div>
+    </div>
+</div>
+<% }) %>
+</body>
+</html>
