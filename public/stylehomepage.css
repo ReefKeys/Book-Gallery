@@ -1,0 +1,274 @@
+/* styles.css */
+
+body {
+    margin: 0; /* Menghapus margin bawaan browser */
+    font-family: Arial, sans-serif; /* Font yang bersih dan mudah dibaca */
+    color: #333; /* Warna teks abu-abu gelap untuk keterbacaan */
+    background-color: rgb(142, 191, 218); /* Warna latar belakang */
+    background-image: url('cool-background.png'); /* Menambahkan gambar latar belakang */
+    background-size: cover; /* Agar gambar memenuhi seluruh layar */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    background-position: center; /* Memusatkan gambar latar */
+  }
+
+/*Navbar*/
+.navbar {
+    position: fixed; /* Navbar tetap di bagian atas saat menggulir */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Tinggi navbar */
+    background: #2c648578; /* Warna latar belakang dengan transparansi */
+    backdrop-filter: blur(10px); /* Efek blur */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Menjaga jarak antara logo dan tombol */
+    padding: 0 20px; /* Memberikan ruang kiri dan kanan pada navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus */
+    z-index: 1000; /* Membawa navbar di atas elemen lain */
+}
+
+/* Logo styling */
+.navbar .logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #22303f; /* Warna teks */
+    margin: 0;
+}
+
+/* Styling untuk Navbar Links */
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px; /* Memberikan jarak antar tombol */
+}
+
+/* Styling untuk tombol login, logout, dan libra */
+.navbar .nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Warna latar belakang hijau */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+/* Hover effect pada tombol login/logout */
+.navbar .nav-links a:hover {
+    background-color: #45a049; /* Warna latar belakang hijau saat hover */
+    color: #ffffff; /* Warna teks tetap putih saat hover */
+}
+
+/* Styling khusus untuk tombol logout */
+.navbar .nav-links a.logout {
+    background-color: #f44336; /* Warna latar belakang merah untuk tombol logout */
+}
+
+.navbar .nav-links a.logout:hover {
+    background-color: #e53935; /* Warna merah lebih gelap saat hover */
+}
+
+/* Styling untuk tombol LIBRA di navbar */
+.navbar .libra-btn {
+    background-color: #2c6485; /* Warna latar belakang tombol LIBRA */
+    color: white; /* Warna teks putih */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect pada tombol LIBRA */
+.navbar .libra-btn:hover {
+    background-color: #1a4d67; /* Warna latar belakang tombol LIBRA saat hover */
+}
+    
+
+    /* Header styling */
+    header {
+        background-color: #000; /* Black background for a bold look */
+        color: #fff; /* White text for contrast */
+        padding: 10px 20px; /* Adds space around the header content */
+    }
+
+    nav {
+        display: flex; /* Creates a horizontal layout for the navigation bar */
+        justify-content: space-between; /* Spreads the nav items evenly */
+        align-items: center; /* Vertically aligns items in the center */
+    }
+
+    nav button {
+        background-color: transparent; /* Transparent background for a minimalist look */
+        color: white; /* White text for visibility on the black header */
+        border: none; /* Removes default button border */
+        font-size: 16px; /* Makes text size consistent */
+        cursor: pointer; /* Changes the cursor to a pointer on hover */
+        padding: 5px 15px; /* Adds space inside the button for a clickable area */
+    }
+
+    nav .active {
+        background-color: #4CAF50; /* Green background for the active button */
+        border-radius: 5px; /* Rounds the button corners */
+}
+
+/* Main content area styling */
+main {
+    min-height: calc(100vh - 70px - 40px); /* 100vh dikurangi tinggi navbar dan footer */
+    padding-bottom: 40px; /* Memberikan ruang untuk footer */
+}
+
+/* Quote Section Styling */
+.quote-section {
+    display: flex; /* Menyusun elemen teks dan gambar secara horizontal */
+    align-items: center; /* Vertikal tengah */
+    justify-content: space-between; /* Memberi ruang di antara elemen */
+    background-color: #ffffff9a; /* Warna latar belakang terang */
+    padding: 20px; /* Memberi jarak di dalam section */
+    border-radius: 10px; /* Membuat sudut membulat */
+    margin-top: 100px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 20px; /* Memberi jarak dengan elemen berikutnya */
+    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus */
+  }
+  
+  .quote-container {
+    flex: 1; /* Memberikan ruang lebih untuk teks */
+    margin-right: 20px; /* Memberi jarak antara teks dan gambar */
+  }
+  
+  .quote-text {
+    font-size: 35px; /* Ukuran teks */
+    font-style: italic; /* Membuat teks miring */
+    color: #333; /* Warna teks */
+    line-height: 1.5; /* Menambahkan jarak antar baris */
+    padding-left: 50px;
+  }
+  
+  .quote-image img {
+    max-width: 500px; /* Membatasi lebar gambar */
+    height: auto; /* Memastikan gambar tetap proporsional */
+    border-radius: 10px; /* Menambahkan sudut melengkung pada gambar */
+    margin-right: 30px;
+  }
+  
+
+  .library-section {
+    text-align: center;
+}
+
+.library-section h1 {
+    font-size: 30px;
+    margin: 20px 0;
+    color: white;
+}
+
+/* Book grid styling */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equally spaced columns */
+    gap: 20px; /* Adds space between grid items */
+    justify-content: center; /* Centers the grid */
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.book-item {
+    display: block; /* Makes the entire item clickable as a link */
+    background-color: #e6f2ff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits the text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.book-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
+}
+
+.book-item img {
+    max-width: 80%; /* Ensures the image fits within its container */
+    border-radius: 5px;
+}
+
+.book-item p {
+    margin: 10px 0 5px; /* Adds spacing around the text */
+    font-size: 14px; /* Slightly smaller text */
+}
+
+/* Footer styling */
+footer {
+    background-color: #2c6485; /* Warna latar belakang footer */
+    color: white; /* Warna teks footer */
+    padding: 20px; /* Memberikan jarak di dalam footer */
+    text-align: center; /* Menengahkan teks */
+    position: relative; /* Membuat footer berada pada posisi relatif */
+    bottom: 0; /* Footer akan berada di bagian bawah halaman */
+    width: 100%; /* Lebar footer 100% */
+}
+
+
+
+/*Running Text*/
+/* CSS Document */
+
+.runtext-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffffc8;
+    overflow: hidden; /* Hanya scroll horizontal yang diaktifkan */
+    margin: 25px 25px 20px 25px; /* Mengatur jarak */
+    border-radius: 10px; /* Membuat sudut membulat */
+    height: 50px; /* Atur tinggi marquee */
+}
+
+.main-runtext {
+    width: 100%; /* Agar marquee memenuhi container */
+    overflow: hidden; /* Menyembunyikan konten di luar area scroll */
+    position: relative;
+    height: 100%;
+}
+
+.marquee-text {
+    font-size: 16px; /* Ukuran font */
+    font-weight: lighter;
+    color: #333;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); /* Sedikit efek bayangan */
+    white-space: nowrap; /* Teks tidak terpotong */
+    line-height: 50px; /* Vertikal tengah */
+}
+
+.runtext-container .holder {
+position: relative;
+overflow: visible;
+display:inline;
+float:left;
+
+}
+
+.runtext-container .holder .text-container {
+	display:inline;
+}
+
+.runtext-container .holder a{
+    align-items: center;
+	text-decoration: none;
+	font-weight: lighter;
+	color:#333;
+	text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+	line-height: -0.5em;
+	font-size:16px;
+    
+}
